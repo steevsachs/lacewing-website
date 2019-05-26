@@ -31,14 +31,7 @@ const createFontFace = ({ fontFamily, fontWeight, filename }: Font): CSSObject =
   },
 })
 
-const textStyles = {
-  blueText: css({
-    color: 'rgb(0, 200, 255)',
-  }),
-  whiteText: css({
-    color: '#f8f8f8',
-  }),
-}
+const textStyles = {}
 
 const globalStyles: CSSObject[] = [
   ...fonts.map(createFontFace),
@@ -50,19 +43,19 @@ const globalStyles: CSSObject[] = [
       color: 'inherit',
       textDecoration: 'none',
     },
-    body: css(textStyles.blueText, {
+    body: css({
       '& #root': {
         height: 'calc(100% - 5px)',
         minHeight: 'calc(100vh - 5px)',
       },
       '& a': {
-        '&:hover': css(textStyles.blueText, {
+        '&:hover': css({
           transition: 'color .5s ease',
         }),
         transition: 'color .5s ease',
       },
       fontFamily: 'sans-serif',
-      fontSize: '4vw',
+      fontSize: 18,
       margin: 2,
       padding: 0,
     }),

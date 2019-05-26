@@ -1,10 +1,11 @@
+const { relative, resolve } = require('path')
 const CopyPlugin = require('copy-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const WebpackBar = require('webpackbar')
+const WorkboxPlugin = require('workbox-webpack-plugin')
 const webpack = require('webpack')
-const { relative, resolve } = require('path')
 
 const rootDir = resolve(__dirname)
 const include = [resolve(rootDir, 'src'), resolve(rootDir, 'config')]

@@ -7,11 +7,15 @@
     "sourceType": "module"
   },
   "parser": "@typescript-eslint/parser",
-  "extends": ["plugin:jest/recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended", "eslint-config-prettier"],
+  "extends": [
+    "plugin:jest/recommended",
+    "plugin:react/recommended",
+    "eslint-config-prettier"
+  ],
   "plugins": ["jest", "prettier", "react", "react-hooks", "wyze"],
   "rules": {
     "arrow-parens": [2, "always"],
-    "import/extensions": [".js", ".json", ".jsx"],
+    "import/extensions": [".json", ".ts", ".tsx"],
     "prettier/prettier": "error",
     "quotes": [
       2,
@@ -50,8 +54,9 @@
     "import/resolver": {
       "node": {
         "paths": ["src"],
-        "extensions": [".js", ".json", ".jsx"]
-      }
+        "extensions": ["json", ".ts", ".tsx"]
+      },
+      "react": { "version": "detect" }
     }
   },
   "env": {
