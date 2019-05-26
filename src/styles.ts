@@ -45,7 +45,10 @@ const globalStyles: CSSObject[] = [
     },
     body: css({
       '& #root': {
+        alignItems: 'center',
+        display: 'flex',
         height: 'calc(100% - 5px)',
+        justifyContent: 'center',
         minHeight: 'calc(100vh - 5px)',
       },
       '& a': {

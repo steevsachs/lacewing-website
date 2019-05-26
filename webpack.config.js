@@ -143,10 +143,10 @@ module.exports = (env = {}) => ({
   },
   plugins: [
     env.production &&
-    new WorkboxPlugin.InjectManifest({
-      globPatterns: ['*.html'],
-      swSrc: './static/service-worker.js',
-    }),
+      new WorkboxPlugin.InjectManifest({
+        globPatterns: ['*.html'],
+        swSrc: './static/service-worker.js',
+      }),
     new HtmlPlugin({
       includeSw: env.production,
       inject: true,
