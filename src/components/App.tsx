@@ -1,21 +1,26 @@
 import { css } from 'emotion'
+import Header from './Header'
 import React from 'react'
+import Section from './Section'
+import TextWithDropCap from './TextWithDropCap'
 
 const styles = {
-  logo: css({
-    width: '90%',
-  }),
   main: css({
-    alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
   }),
 }
 
 const App: React.FC = () => (
   <div className={styles.main}>
-    <img className={styles.logo} src="assets/Lacewing.png" />
+    <Header />
+    <Section image="header_bg.jpg" title="About Me">
+      <TextWithDropCap>
+        I am a hospice nurse and a small scale producer of seasonal cut flower arrangements to
+        brighten lives and local businesses in Wake County, NC
+      </TextWithDropCap>
+    </Section>
+    <Section image="color_bg.jpg" />
   </div>
 )
 

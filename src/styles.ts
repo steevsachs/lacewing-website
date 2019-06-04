@@ -3,15 +3,19 @@ import { css, injectGlobal } from 'emotion'
 
 type Font = {
   fontFamily: string
-  fontWeight: number
+  fontWeight?: number
   filename: string
+}
+
+const colors = {
+  green: '#354726',
+  offWhite: '#f8f8f8',
+  white: '#fff',
 }
 
 const formats = ['ttf', 'woff']
 
-const fonts: Font[] = [
-  { fontFamily: '"Final Fantasy 3/6 Font"', fontWeight: 900, filename: 'final_fantasy_36_font' },
-]
+const fonts: Font[] = [{ fontFamily: '"Avenir Book"', filename: 'Avenir-Book' }]
 
 const fontFaceSrc = (filename: string) =>
   formats
@@ -44,22 +48,16 @@ const globalStyles: CSSObject[] = [
       textDecoration: 'none',
     },
     body: css({
-      '& #root': {
-        alignItems: 'center',
-        display: 'flex',
-        height: 'calc(100% - 5px)',
-        justifyContent: 'center',
-        minHeight: 'calc(100vh - 5px)',
-      },
       '& a': {
         '&:hover': css({
           transition: 'color .5s ease',
         }),
         transition: 'color .5s ease',
       },
-      fontFamily: 'sans-serif',
+      background: colors.offWhite,
+      fontFamily: '"Avenir Book", sans-serif',
       fontSize: 18,
-      margin: 2,
+      margin: 0,
       padding: 0,
     }),
   },
@@ -67,4 +65,4 @@ const globalStyles: CSSObject[] = [
 
 injectGlobal(globalStyles)
 
-export { textStyles }
+export { colors, textStyles }
