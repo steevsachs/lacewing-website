@@ -7,6 +7,7 @@ const styles = {
   container: css({
     alignItems: 'center',
     backgroundImage: 'url("assets/main.jpg")',
+    backgroundPosition: 'center',
     display: 'flex',
     height: '100vh',
     justifyContent: 'center',
@@ -18,7 +19,7 @@ const styles = {
     flexDirection: 'column',
     height: '50vh',
     justifyContent: 'center',
-    maxWidth: 300,
+    maxWidth: '70vw',
     opacity: 0.9,
     outlineColor: colors.green,
     outlineOffset: -10,
