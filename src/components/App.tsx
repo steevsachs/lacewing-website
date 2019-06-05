@@ -1,26 +1,30 @@
 import { css } from 'emotion'
+import AboutMe from './Sections/AboutMe'
+import Footer from './Footer'
 import Header from './Header'
 import React from 'react'
-import Section from './Section'
-import TextWithDropCap from './TextWithDropCap'
+import Prices from './Sections/Prices'
+import Divider from './Divider'
 
 const styles = {
-  main: css({
+  body: css({
+    alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
+    justifyContent: 'center',
   }),
+  main: css({}),
 }
 
 const App: React.FC = () => (
   <div className={styles.main}>
     <Header />
-    <Section image="header_bg.jpg" title="About Me">
-      <TextWithDropCap>
-        I am a hospice nurse and a small scale producer of seasonal cut flower arrangements to
-        brighten lives and local businesses in Wake County, NC
-      </TextWithDropCap>
-    </Section>
-    <Section image="color_bg.jpg" />
+    <div className={styles.body}>
+      <AboutMe />
+      <Divider />
+      <Prices />
+    </div>
+    <Footer />
   </div>
 )
 

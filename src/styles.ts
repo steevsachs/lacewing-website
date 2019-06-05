@@ -8,14 +8,19 @@ type Font = {
 }
 
 const colors = {
+  black: '#303030',
   green: '#354726',
-  offWhite: '#f8f8f8',
-  white: '#fff',
+  // green: '#306728',
+  offWhite: '#f6f6f6',
+  white: '#fefefe',
 }
 
-const formats = ['ttf', 'woff']
+const formats = ['ttf']
 
-const fonts: Font[] = [{ fontFamily: '"Avenir Book"', filename: 'Avenir-Book' }]
+const fonts: Font[] = [
+  { fontFamily: '"DancingScript"', filename: 'DancingScript-Regular' },
+  { fontFamily: '"Raleway"', filename: 'Raleway-Regular' },
+]
 
 const fontFaceSrc = (filename: string) =>
   formats
@@ -35,7 +40,12 @@ const createFontFace = ({ fontFamily, fontWeight, filename }: Font): CSSObject =
   },
 })
 
-const textStyles = {}
+const textStyles = {
+  header: css({
+    fontFamily: '"DancingScript", serif',
+    fontSize: '2em',
+  }),
+}
 
 const globalStyles: CSSObject[] = [
   ...fonts.map(createFontFace),
@@ -55,8 +65,10 @@ const globalStyles: CSSObject[] = [
         transition: 'color .5s ease',
       },
       background: colors.offWhite,
-      fontFamily: '"Avenir Book", sans-serif',
-      fontSize: 18,
+      color: colors.black,
+      fontFamily: '"Raleway", sans-serif',
+      fontSize: 16,
+      letterSpacing: '.1em',
       margin: 0,
       padding: 0,
     }),

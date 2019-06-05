@@ -9,6 +9,7 @@ const styles = {
       fontSize: '250%',
     },
     lineHeight: '1.5em',
+    marginBottom: '1.5em',
   }),
 }
 
