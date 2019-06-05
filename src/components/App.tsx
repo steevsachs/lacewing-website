@@ -1,10 +1,10 @@
 import { css } from 'emotion'
 import AboutMe from './Sections/AboutMe'
+import Divider from './Divider'
 import Footer from './Footer'
 import Header from './Header'
-import React from 'react'
 import Prices from './Sections/Prices'
-import Divider from './Divider'
+import React from 'react'
 
 const styles = {
   body: css({
