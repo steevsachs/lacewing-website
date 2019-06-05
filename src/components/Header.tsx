@@ -29,6 +29,7 @@ const styles = {
     textAlign: 'center',
   }),
   logo: css({
+    height: '60%',
     margin: '2em',
   }),
 }

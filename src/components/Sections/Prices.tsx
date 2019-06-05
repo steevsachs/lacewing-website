@@ -1,23 +1,24 @@
-import { css } from 'emotion'
-import React from 'react'
 import { colors, textStyles } from '../../styles'
+import { css } from 'emotion'
 import Price from '../Price'
+import React from 'react'
 
 const styles = {
   column: css({
     alignItems: 'center',
     backgroundColor: colors.white,
     display: 'flex',
-    flexBasis: '33%',
-    flexGrow: 0,
+    flexBasis: '20%',
     flexDirection: 'column',
+    flexGrow: 0,
     justifyContent: 'center',
     margin: '2em',
     padding: '2em',
   }),
   columnContainer: css({
     display: 'flex',
-    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
   }),
   container: css({
     alignItems: 'center',

@@ -9,7 +9,7 @@ type SectionProps = {
 const styles = {
   container: css({
     marginBottom: '8em',
-    margin: '2em 10vh',
+    margin: '2em 5vh',
     maxWidth: 1200,
     outlineColor: colors.green,
     outlineOffset: -10,
