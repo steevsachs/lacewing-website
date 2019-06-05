@@ -17,7 +17,7 @@ const styles = {
     backgroundColor: colors.offWhite,
     display: 'flex',
     flexDirection: 'column',
-    height: '50vh',
+    height: '70vh',
     justifyContent: 'center',
     maxWidth: '70vw',
     opacity: 0.9,
