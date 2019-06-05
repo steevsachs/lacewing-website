@@ -17,9 +17,10 @@ const styles = {
     backgroundColor: colors.offWhite,
     display: 'flex',
     flexDirection: 'column',
-    height: '70vh',
     justifyContent: 'center',
-    maxWidth: '70vw',
+    maxHeight: '70vh',
+    maxWidth: 300,
+    width: '70vw',
     opacity: 0.9,
     outlineColor: colors.green,
     outlineOffset: -10,
@@ -30,7 +31,7 @@ const styles = {
     textAlign: 'center',
   }),
   logo: css({
-    height: '60%',
+    maxWidth: 290,
     margin: '2em',
   }),
 }
